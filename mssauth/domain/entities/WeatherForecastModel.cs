@@ -1,6 +1,6 @@
-namespace mssauth;
+namespace mssauth.domain.entites;
 
-public class WeatherForecast
+public class WeatherForecastModel
 {
     public DateOnly Date { get; set; }
 
