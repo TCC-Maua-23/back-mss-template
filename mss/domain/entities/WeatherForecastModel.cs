@@ -1,4 +1,4 @@
-namespace mssauth.domain.entites;
+namespace mss.domain.entites;
 
 public class WeatherForecastModel
 {

@@ -3,11 +3,11 @@
 version: '3.4'
 
 services:
-  mssauth:
-    image: mssauth
+  mss:
+    image: mss
     build:
       context: .
-      dockerfile: mssauth/Dockerfile
+      dockerfile: mss/Dockerfile
     ports:
       - 5000:5000
     environment:
