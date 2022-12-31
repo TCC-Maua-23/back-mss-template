@@ -11,16 +11,16 @@ USER appuser
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["mss/mss.csproj", "mss/"]
-RUN dotnet restore "mss/mss.csproj"
+COPY ["msstemplate/msstemplate.csproj", "msstemplate/"]
+RUN dotnet restore "msstemplate/msstemplate.csproj"
 COPY . .
-WORKDIR "/src/mss"
-RUN dotnet build "mss.csproj" -c Release -o /app/build
+WORKDIR "/src/msstemplate"
+RUN dotnet build "msstemplate.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "mss.csproj" -c Release -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "msstemplate.csproj" -c Release -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "mss.dll"]
+ENTRYPOINT ["dotnet", "msstemplate.dll"]

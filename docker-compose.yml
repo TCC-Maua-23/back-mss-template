@@ -3,11 +3,11 @@
 version: '3.4'
 
 services:
-  mss:
-    image: mss
+  msstemplate:
+    image: msstemplate
     build:
       context: .
-      dockerfile: mss/Dockerfile
+      dockerfile: msstemplate/Dockerfile
     ports:
       - 5000:5000
     environment:

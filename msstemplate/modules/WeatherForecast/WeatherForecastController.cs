@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using mss.domain.entites;
+using msstemplate.domain.entites;
 
-namespace mss.modules.WeatherForecast;
+namespace msstemplate.modules.WeatherForecast;
 
 [ApiController]
 [Route("[controller]")]

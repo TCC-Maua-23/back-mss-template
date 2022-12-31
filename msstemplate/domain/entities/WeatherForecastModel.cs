@@ -1,4 +1,4 @@
-namespace mss.domain.entites;
+namespace msstemplate.domain.entites;
 
 public class WeatherForecastModel
 {
